@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.android.courtcounter.MainActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/quarter"
+        android:layout_marginBottom="8dp"
+        android:textSize="32sp"
+        android:text="@string/firstQuarter"
+        android:gravity="center">
+    </TextView>
+
+    <LinearLayout
+        android:id="@+id/teamsScore"
+        android:layout_below="@id/quarter"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginLeft="24dp"
+            android:layout_marginRight="24dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/team_a_text"
+                android:layout_marginBottom="8dp"
+                android:layout_marginTop="16dp"
+                android:textSize="14sp"
+                android:textColor="#616161"
+                android:fontFamily="sans-serif-medium"
+                android:gravity="center_horizontal"
+                android:text="@string/teamA" />
+
+            <TextView
+                android:id="@+id/team_a_score"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:textSize="56sp"
+                android:textColor="#000000"
+                android:fontFamily="sans-serif-medium"
+                android:gravity="center_horizontal"
+                android:text="@string/numberZero" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/team_a_3pointer"
+                android:layout_marginBottom="8dp"
+                android:layout_marginTop="16dp"
+                android:gravity="center"
+                android:onClick="threePointerA"
+                android:text="@string/threePointer"
+                android:enabled="false"
+                android:textAllCaps="true" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/team_a_2pointer"
+                android:layout_marginBottom="8dp"
+                android:gravity="center"
+                android:onClick="twoPointerA"
+                android:enabled="false"
+                android:text="@string/twoPointer"
+                android:textAllCaps="true" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/team_a_free_throw"
+                android:gravity="center"
+                android:onClick="freeThrowA"
+                android:text="@string/freeThrow"
+                android:enabled="false"
+                android:textAllCaps="true" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_marginTop="16dp"
+            android:background="@android:color/darker_gray"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginLeft="24dp"
+            android:layout_marginRight="24dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/team_b_text"
+                android:layout_marginBottom="8dp"
+                android:layout_marginTop="16dp"
+                android:textSize="14sp"
+                android:textColor="#616161"
+                android:fontFamily="sans-serif-medium"
+                android:gravity="center_horizontal"
+                android:text="@string/teamB" />
+
+            <TextView
+                android:id="@+id/team_b_score"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:layout_marginTop="8dp"
+                android:textSize="56sp"
+                android:textColor="#000000"
+                android:fontFamily="sans-serif-medium"
+                android:gravity="center_horizontal"
+                android:text="@string/numberZero" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/team_b_3pointer"
+                android:layout_marginBottom="8dp"
+                android:layout_marginTop="16dp"
+                android:gravity="center"
+                android:onClick="threePointerB"
+                android:text="@string/threePointer"
+                android:enabled="false"
+                android:textAllCaps="true" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/team_b_2pointer"
+                android:layout_marginBottom="8dp"
+                android:gravity="center"
+                android:onClick="twoPointerB"
+                android:text="@string/twoPointer"
+                android:enabled="false"
+                android:textAllCaps="true" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/team_b_free_throw"
+                android:gravity="center"
+                android:onClick="freeThrowB"
+                android:text="@string/freeThrow"
+                android:enabled="false"
+                android:textAllCaps="true" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/timerValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/teamsScore"
+        android:layout_centerHorizontal="true"
+        android:textSize="40sp"
+        android:textColor="#000000"
+        android:text="@string/timerVal" />
+
+    <Button
+        android:id="@+id/startButton"
+        android:layout_width="90dp"
+        android:layout_height="45dp"
+        android:layout_below="@id/timerValue"
+        android:layout_marginLeft="38dp"
+        android:onClick="onClick"
+        android:text="@string/startButtonLabel" />
+
+    <Button
+        android:id="@+id/pauseButton"
+        android:layout_width="90dp"
+        android:layout_height="45dp"
+        android:layout_alignBaseline="@+id/startButton"
+        android:layout_alignBottom="@+id/startButton"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="38dp"
+        android:enabled="false"
+        android:text="@string/pauseButtonLabel" />
+
+    <Button
+        android:id="@+id/resetButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerInParent="true"
+        android:onClick="nextQuarter"
+        android:text="@string/ReportNextQuarter"
+        android:layout_marginBottom="32dp"
+        android:enabled="false"
+        android:textAllCaps="true" />
+
+</RelativeLayout>

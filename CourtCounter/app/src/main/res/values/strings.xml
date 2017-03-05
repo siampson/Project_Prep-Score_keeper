@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name">Court Counter</string>
+    <string name="timerVal">01:00</string>
+    <string name="timerVal0">00:00</string>
+    <string name="teamA">Home</string>
+    <string name="teamB">Guest</string>
+    <string name="team">team</string>
+    <string name="a">a</string>
+    <string name = "at">at</string>
+    <string name="scores">scores </string>
+    <string name="pauseButtonLabel">Pause</string>
+    <string name="startButtonLabel">Start</string>
+    <string name="resumeButtonLabel">Resume</string>
+    <string name="ReportNextQuarter">Report/Next Quarter</string>
+    <string name="firstQuarter">1st quarter</string>
+    <string name="secondQuarter">2nd quarter</string>
+    <string name="thirdQuarter">3rd quarter</string>
+    <string name="forthQuarter">4th quarter</string>
+    <string name="threePointer">3 pointer </string>
+    <string name="twoPointer">2 pointer </string>
+    <string name="freeThrow">Free Throw </string>
+    <string name="start">Start</string>
+    <string name="report">report</string>
+    <string name="numberZero">0</string>
+    <string-array name="quarter">
+        <item>Quarter #1</item>
+        <item>Quarter #2</item>
+        <item>Quarter #3</item>
+        <item>Quarter #4</item>
+    </string-array>
+</resources>
